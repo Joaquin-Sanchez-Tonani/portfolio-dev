@@ -23,10 +23,10 @@ if (month < 0 || (month === 0 && day < 0)) {
         <!--<p class="phrase">"Programming isn’t about what you know; it’s about what you can figure out."</p-->
         <!--img src="https://joaquinsanton.netlify.app/assets/profile-d1673825.jpg" alt="joaquin photo"-->
         <p class="about">
-            I’m {edad} years old and specialize as a <span class="important-words">software developer</span>.
-            I’m currently <span class="important-words">studying</span> programming at a technical university.
-            While I don’t have professional experience yet, I’ve dedicated over 3 years to learning and improving my skills.
-            I’m <span class="important-words">eager</span> to apply my knowledge and contribute to real-world projects.
+            I’m <span class="important-words">{edad} years old</span> and specialize as a <span class="important-words">software developer</span>.
+            I’m currently <span class="important-words">studying programming at a technical university</span>.
+            While I don’t have professional experience yet, I’ve <span class="important-words">dedicated over 3 years to learning and improving my skills</span>.
+            I’m eager to apply my knowledge and contribute to real-world projects.
         </p>
         <div class="links">
             <div>
@@ -35,7 +35,7 @@ if (month < 0 || (month === 0 && day < 0)) {
                 <a target="_blank" class="description-a" href="https://leetcode.com/u/FazSuS3gAv/"><i class="fa-solid fa-code"></i>LeetCode</a>
             </div>
             <div>
-                <a target="_blank" class="description-a" href="https://drive.google.com/file/d/10jJ1gazRarwIOpvuYnh8IMbYzfDc5r4G/view?usp=sharing"><i class="fa-solid fa-download"></i>Download CV</a>
+                <a target="_blank" class="description-a" href="https://drive.google.com/file/d/1yyLzDOEVZ00JddzPlMJiNuhv81AfvRk6/view?usp=sharing"><i class="fa-solid fa-download"></i>Download CV</a>
                 <CopyEmail />
             </div>
         </div>
@@ -152,7 +152,7 @@ if (month < 0 || (month === 0 && day < 0)) {
     }
     .about{
         font-size: 18px;
-        color: rgb(136, 136, 136);
+        color: var(--normal-text);
     }
     .description img{
         background-color: var();
@@ -160,7 +160,7 @@ if (month < 0 || (month === 0 && day < 0)) {
         width: 170px;
     }
     .important-words{
-        color: rgb(213, 206, 206);
+        color: rgb(168, 155, 194);
     }
     .links{
         display: flex;

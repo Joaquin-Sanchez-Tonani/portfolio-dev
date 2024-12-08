@@ -54,11 +54,11 @@
     list-style: none;
 }
 .time-component span{
-    color: rgb(159, 159, 159);
+    color: var(--normal-text);
     font-size: 17px;
 }    
 .text-component span{
-    color: rgb(159, 159, 159);
+    color: var(--normal-text);
     font-size: 17px;
 }
 
@@ -74,7 +74,10 @@
     }
     .time-component span{
         font-size: 14px;
-    }    
+    }  
+    .text-component{
+        font-size: 14px;
+    }  
     .text-component span{
         font-size: 14px;
     }

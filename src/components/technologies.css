@@ -49,14 +49,14 @@
 }
 
 .active{
-    background-color: rgba(85, 84, 138, 0.346) !important; 
+    background-color: var(--background-color2) !important; 
     backdrop-filter: blur(10px);
     color: rgb(197, 179, 255);
     font-weight: 600;
 }
 
 .classification-ul1 li:hover{
-    background-color: rgba(85, 84, 138, 0.346);
+    background-color: var(--background-color2);
     backdrop-filter: blur(10px);
     transition: .5s;
 }
