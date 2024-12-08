@@ -1,4 +1,4 @@
 [build]
-base = "portfolio-dev"
+base = ""
 publish = "portfolio-dev/dist"
 command = "astro build"
