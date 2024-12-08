@@ -1,0 +1,86 @@
+---
+const projects = [
+    {name: "Hangman", tools: "React", img: "public/react.png", url: "https://hangmanjoaquin.netlify.app/"},
+    {name: "Ecommerce", tools: "React", img: "public/node.png", url: "https://joaquin-sanchez-tonani-ecommerce.netlify.app/"}
+]
+---
+
+<section id="projects" class="content">
+    <div class="position" id="projects"></div>
+    <h4><i class="fa-solid fa-diagram-project"></i>Projects</h4>
+    <section>
+        {projects.map(({name,tools,url,img}) => (
+            <a href={url}>
+                <figure>
+                    <img src={img} alt={name}/>
+                    <figcaption>
+                        <span>{name}</span>
+                        <span class="tools">{tools}</span>
+                    </figcaption>
+                </figure>
+            </a>
+        ))}
+    </section>
+</section>
+
+<style>
+    a:hover{
+        transform: scale(1.1);
+        transition: .5s ease;
+    }
+    a{
+        transition: .5s ease;
+        flex-basis: 250px;
+    }
+    section{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 100%;
+        gap: 30px;
+    }
+    figure{
+        margin: 0;
+        position: relative;
+        background-color: rgba(85, 84, 138, 0.346);
+        cursor: pointer;
+    }
+    figcaption{
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+        box-sizing: border-box;
+        color: white;
+        background: rgba(0, 0, 0, 0.5);
+        font-size: 14px;
+    }
+    h5{
+
+    }
+    .tools{
+
+    }
+    img{
+        width: 100%;
+        height: 350px;
+        object-fit: contain;
+    }
+    .content{
+        width: 100%;
+        margin: 20dvh 0;
+        position: relative;
+    }
+    .position{
+        top: -50px;
+    }
+    h4{
+        color: var(--primary-color);
+        font-size: 35px;
+        display: flex;
+        gap: 15px;
+        margin: 20px 0;
+    }
+</style>

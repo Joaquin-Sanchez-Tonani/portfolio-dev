@@ -1,0 +1,42 @@
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+    const menuLinks = document.querySelectorAll("nav a");
+    const sections = document.querySelectorAll("section");
+
+    function onScroll() {
+    const scrollPos = window.scrollY + window.innerHeight / 2; // Offset dinámico
+
+    sections.forEach((section) => {
+        const top = section.offsetTop;
+        const height = section.offsetHeight;
+        const id = section.getAttribute("id");
+
+        if (scrollPos >= top && scrollPos < top + height) {
+            menuLinks.forEach((link) => {
+                link.classList.remove("active-section");
+            });
+            const activeLink = document.querySelector(`a[href="#${id}"]`);
+            if (activeLink) {
+                activeLink.classList.add("active-section");
+            }
+        }
+    });
+
+    // Activar manualmente la primera sección si está encima del scroll
+    if (scrollPos < sections[0].offsetTop + sections[0].offsetHeight) {
+        menuLinks.forEach((link) => {
+            link.classList.remove("active-section");
+        });
+        const firstLink = document.querySelector(`a[href="#${sections[0].getAttribute("id")}"]`);
+        if (firstLink) {
+            firstLink.classList.add("active-section");
+        }
+    }
+}
+
+
+    window.addEventListener("scroll", onScroll);
+    onScroll(); // Llama la función una vez al inicio para aplicar el estado activo si la página está desplazada
+});
+
+</script>

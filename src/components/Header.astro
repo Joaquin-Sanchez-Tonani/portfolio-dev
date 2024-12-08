@@ -1,0 +1,117 @@
+<header id="header">
+	<button id="menu"><i class="fa-solid fa-bars"></i></button>
+	<nav id="nav">
+		<a href="#home" class="sections">HOME</a>
+		<a href="#formation" class="sections">FORMATION</a>
+		<!--a href="#workExperience" class="sections">WORK EXPERIENCE</a-->
+		<a href="#technologies" class="sections">TECHNOLOGIES</a>
+		<a href="#projects" class="sections">PROJECTS</a>
+	</nav>
+</header>
+<script>
+	var header = document.getElementById("header")
+	var nav = document.getElementById("nav")
+	var menu = document.getElementById("menu")
+
+	var state = false
+	const openMenu = () =>{
+		state = !state
+		if(state){
+			header.classList.add("header-burger")
+			menu.classList.add("button-active")
+			nav.classList.add("nav-active")
+		}else{ 
+			header.classList.remove("header-burger")
+			nav.classList.remove("nav-active")
+			menu.classList.remove("button-active")
+		}
+	}
+	const changeSection = () =>{
+		state = !state
+		header.classList.remove("header-burger")
+		nav.classList.remove("nav-active")
+		menu.classList.remove("button-active")
+	}
+	const elements = document.getElementsByTagName("a")
+	for(let i = 0; i < elements.length; i++){
+		elements[i].addEventListener("click", () => changeSection())	
+	}
+	document.getElementById("menu").addEventListener("click", () => openMenu())
+</script>
+<style>
+	i{
+		font-size: 30px;
+	}
+	header{
+		position: fixed;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 15px 0;
+		background-color: rgba(153, 154, 155, 0.407);
+		backdrop-filter: blur(5px); 
+		background: rgba(118, 118, 118, 0.052); 
+		z-index: 1000; 
+		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+		height: 50px;
+	}
+	nav{
+		display: flex;
+		gap: 25px;
+	}
+	a{
+		transition: .5s;
+	}
+	a:hover{
+		transition: .5s;
+		color: rgb(161, 161, 161);
+	}
+	.active-section{
+		color: var(--secondary-color);
+		transform: scale(1.2);
+	}
+	button{
+		display: none;
+	}
+	@media (max-width: 980px){
+		header{
+			display: flex;
+			justify-content: end;
+		}
+		nav{
+			display: none;
+		}
+		nav a{
+			font-size: 35px;
+		}
+		button{
+			display: block;
+			margin: 0 35px;
+			border: none;
+			font-size: 30px;
+			background: none;
+			color: var(--primary-color);
+			cursor: pointer;
+		}
+		.header-burger{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+			height: 100dvh;
+			backdrop-filter: blur(15px); 
+		}
+		.nav-active{
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+		}
+		.button-active{
+			position: absolute;
+			right: 0;
+			top: 22px;
+		}
+	}
+</style>

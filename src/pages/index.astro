@@ -1,0 +1,51 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Home from '../components/Home.astro';
+import Technologies from '../components/technologies.jsx';
+import Formation from '../components/Formation.astro';
+import Projects from '../components/Projects.astro';
+const formation = [
+    {dir:"https://utn.edu.ar/es/",tittle: "University certificate in programming",time:"06/2024 - Current", text:"Participate in computer operation and programming at various levels. Develop software using different programming languages, methodologies, and techniques. Analyze, implement, and optimize system programming. Create, program, and maintain IT systems and computer networks.", img:"public/utn.jpg"},
+    {dir:"https://youtube.com/",tittle: "Course",time:"03/2022 - 04/2023", text:"I have completed various online courses and continuously expand my knowledge, learning from them, industry experts. (midudev - Fazt Code - HolaMundo)", img:"public/yt.jpg"},
+    {dir:"https://redfasta.edu.ar/colegio/santotomas/",tittle: "High school",time:"03/2016 - 11/2021", text:"I hold a Bachelor's degree in Economics and Administration from FASTA Santo Tomás de Aquino Secondary School, with knowledge in financial analysis, business management, and economic decision-making.", img:"public/fasta.png"}
+]
+const workExperience = [
+    {dir:"https://utn.edu.ar/es/",tittle: "Fiver",time:"06/2024 - Current", text:"Participate in computer operation and programming at various levels. Develop software using different programming languages, methodologies, and techniques. Analyze, implement, and optimize system programming. Create, program, and maintain IT systems and computer networks.", img:"public/utn.jpg"},
+]
+---
+
+<Layout title="Joaquin Dev">
+	<main>
+		<Home />
+		<Formation list={formation} tittleSection="Formation" select="formation" logo="fa-solid fa-school"/>
+		<!--Formation list={workExperience} tittleSection="Work Experience" select="workExperience" logo="fa-solid fa-briefcase"-->
+		<Technologies client:load/>
+		<Projects />
+	</main>
+</Layout>
+
+<style>
+	main {
+		color: white;
+		font-size: 20px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin: 0 15%;
+	}
+	@media (min-width:980px) and (max-width: 1600px) {
+		main{
+			margin: 0 5%;
+		}
+	}
+	@media (min-width: 500px) and (max-width: 980px) {
+		main{
+			margin: 0 2%;
+		}
+	}
+	@media (max-width: 500px){
+		main{
+			margin: 0 2%;
+		}
+	}
+</style>
