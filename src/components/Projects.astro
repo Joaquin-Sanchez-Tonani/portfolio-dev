@@ -1,6 +1,6 @@
 ---
 const projects = [
-    {name: "Hangman", tools: "React", img: "/react.png", url: "https://hangmanjoaquin.netlify.app/"},
+    {name: "Hangman", tools: "React", img: "/hangman.png", url: "https://hangmanjoaquin.netlify.app/"},
     {name: "Ecommerce", tools: "React", img: "/node.png", url: "https://joaquin-sanchez-tonani-ecommerce.netlify.app/"}
 ]
 ---
@@ -12,7 +12,7 @@ const projects = [
         {projects.map(({name,tools,url,img}) => (
             <a href={url}>
                 <figure>
-                    <img src={img} alt={name}/>
+                    <img src={img} alt={name} loading="lazy"/>
                     <figcaption>
                         <span>{name}</span>
                         <span class="tools">{tools}</span>
@@ -31,6 +31,7 @@ const projects = [
     a{
         transition: .5s ease;
         flex-basis: 250px;
+        overflow: hidden;
     }
     section{
         display: flex;
@@ -66,7 +67,8 @@ const projects = [
     img{
         width: 100%;
         height: 350px;
-        object-fit: contain;
+        object-fit: cover;
+        opacity: .5;
     }
     .content{
         width: 100%;
