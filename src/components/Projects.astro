@@ -1,7 +1,8 @@
 ---
 const projects = [
-    {name: "Hangman", tools: "React", img: "/hangman.png", url: "https://hangmanjoaquin.netlify.app/"},
-    {name: "Ecommerce", tools: "React", img: "/eco.png", url: "https://joaquin-sanchez-tonani-ecommerce.netlify.app/"}
+    {name: "Nike", tools: [{ name: "React", icon: "fa-brands fa-react" },{ name: "Python", icon: "fa-brands fa-python" },{ name: "MySQL", icon: "fa-solid fa-database"}], img: "/nike.png", url: "https://nike-joaquin.netlify.app/"},
+    {name: "Hangman", tools: [{ name: "React", icon: "fa-brands fa-react" }], img: "/hangman.png", url: "https://hangmanjoaquin.netlify.app/"},
+    {name: "Ecommerce", tools: [{ name: "React", icon: "fa-brands fa-react" }], img: "/eco.png", url: "https://joaquin-sanchez-tonani-ecommerce.netlify.app/"}
 ]
 ---
 
@@ -10,12 +11,16 @@ const projects = [
     <h4><i class="fa-solid fa-diagram-project"></i>Projects</h4>
     <section>
         {projects.map(({name,tools,url,img}) => (
-            <a href={url}>
+            <a target="_blank" href={url}>
                 <figure>
                     <img src={img} alt={name} loading="lazy"/>
                     <figcaption>
                         <span>{name}</span>
-                        <span class="tools">{tools}</span>
+                        <div style="display: flex; gap:10px;">
+                            {tools.map(({name, icon},key) => (
+                            <i key={key} className={icon}></i>
+                            ))}
+                        </div>
                     </figcaption>
                 </figure>
             </a>
@@ -89,7 +94,7 @@ const projects = [
         img{
         width: 100%;
         height: 300px;
-        object-fit: contain;
+
         }
         a:hover{
             transform: scale(1);
