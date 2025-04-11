@@ -11,6 +11,7 @@ export default function Technologies() {
     ];
     
     const learningList = [
+        { img: "/ts.png", name: "TypeScript", time: "1 years", text: "Types, interfaces, functions, classes, type annotations, generics, type inference, strict typing, code scalability", url: "https://www.typescriptlang.org/docs/" },
         { img: "/css.png", name: "CSS", time: "2 years", text: "Selectors, properties, animations, transitions, responsiveness, media queries, pseudo-classes", url: "https://developer.mozilla.org/en-US/docs/Web/CSS" },
         { img: "/mysql.png", name: "MySQL", time: "Less than 1 year.", text: "Databases, tables, queries, joins, indexes, CRUD operations.", url: "https://www.mysql.com" },
         { img: "/node.png", name: "Node", time: "Less than 1 year.", text: "Modules, Express, routing, APIs, asynchronous programming.", url: "https://nodejs.org" },
