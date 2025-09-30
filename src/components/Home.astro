@@ -1,11 +1,11 @@
 ---
 import CopyEmail from "./copyEmail.astro"
-let today = new Date("2024-06-08"); 
-const dateOfBirth = new Date("2003-06-07"); 
+let today = new Date();
+const dateOfBirth = new Date(2003, 5, 7); 
 
+let edad = today.getFullYear() - dateOfBirth.getFullYear();
 let month = today.getMonth() - dateOfBirth.getMonth();
 let day = today.getDate() - dateOfBirth.getDate();
-let edad = today.getFullYear() - dateOfBirth.getFullYear();
 
 if (month < 0 || (month === 0 && day < 0)) {
     edad--;
