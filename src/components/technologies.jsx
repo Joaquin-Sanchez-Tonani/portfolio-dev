@@ -4,8 +4,9 @@ import './technologies.css';
 
 export default function Technologies() {
     const masteredList = [
+        { img: "/net.png", name: "Net", time: "1 year", text: "C#, ASP.NET Core Web API, Entity Framework Core, SQL Server, Clean Architecture, Dependency Injection, Repository Pattern, Interfaces, REST APIs, JWT Authentication, LINQ, DTOs, Middleware, SOLID Principles, Swagger, Async/Await.", url: "https://dotnet.microsoft.com/es-es/"},
         { img: "/python.png", name: "Python", time: "2 years", text: "Variables, functions, loops, conditionals, lists, dictionaries, object-oriented programming (OOP), file handling, APIs, modules, libraries.", url: "https://www.python.org" },
-        { img: "/node.png", name: "Node", time: "2 year.", text: "Modules, Express, routing, APIs, asynchronous programming.", url: "https://nodejs.org" },
+        { img: "/node.png", name: "Node", time: "2 years.", text: "Modules, Express, routing, APIs, asynchronous programming.", url: "https://nodejs.org" },
         { img: "/react.png", name: "React", time: "2 years", text: "Components, JSX, props, state, hooks, useState, event handling, routing, context API, functional components.", url: "https://reactjs.org" },
         { img: "/js.png", name: "Javascript", time: "2 years", text: "Variables, functions, loops, arrays, objects, DOM manipulation, events, APIs, async/await, promises.", url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript" },
         { img: "/html.png", name: "HTML", time: "2 years", text: "Tables, forms, lists, links, images, multimedia elements, semantic structure, forms with validation, accessibility.", url: "https://developer.mozilla.org/en-US/docs/Web/HTML" },
